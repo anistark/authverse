@@ -42,7 +42,8 @@ if (app.get('env') === 'development') {
     res.status(err.status || 500);
     res.render('pages/error', {
       message: err.message,
-      error: err
+      error: err,
+      title: 'AuthServer'
     });
   });
 }
@@ -53,7 +54,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('pages/error', {
     message: err.message,
-    error: {}
+    error: {},
+    title: 'AuthServer'
   });
 });
 
